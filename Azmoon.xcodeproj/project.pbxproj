@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16C9AFB632AF73BF7F5C839C /* Pods_AzmoonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF224EB6FF7B9BE78160BEB3 /* Pods_AzmoonUITests.framework */; };
+		2A8DE15AABC704EAF26530E6 /* Pods_Azmoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 685F8F39995B9D11269014E6 /* Pods_Azmoon.framework */; };
+		5A7291BB2469B4128714D6F6 /* Pods_AzmoonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9118F8485DD83803DDCD4D34 /* Pods_AzmoonTests.framework */; };
 		D3F7A2E321D50CD400987DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7A2E221D50CD400987DBE /* AppDelegate.swift */; };
 		D3F7A2E521D50CD400987DBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7A2E421D50CD400987DBE /* ViewController.swift */; };
 		D3F7A2E821D50CD400987DBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F7A2E621D50CD400987DBE /* Main.storyboard */; };
@@ -14,6 +17,10 @@
 		D3F7A2ED21D50CD500987DBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F7A2EB21D50CD500987DBE /* LaunchScreen.storyboard */; };
 		D3F7A2F821D50CD500987DBE /* AzmoonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7A2F721D50CD500987DBE /* AzmoonTests.swift */; };
 		D3F7A30321D50CD500987DBE /* AzmoonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7A30221D50CD500987DBE /* AzmoonUITests.swift */; };
+		D3F7A31121D511D100987DBE /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F7A31021D511D100987DBE /* Add.storyboard */; };
+		D3F7A31321D5133900987DBE /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7A31221D5133900987DBE /* AddViewController.swift */; };
+		D3F7A31521D51F7200987DBE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7A31421D51F7200987DBE /* RegisterViewController.swift */; };
+		D3F7A31721D51FE800987DBE /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F7A31621D51FE800987DBE /* Register.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184CA40229660FC70A36D278 /* Pods-Azmoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Azmoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Azmoon/Pods-Azmoon.release.xcconfig"; sourceTree = "<group>"; };
+		3A80A443350B6A5DD07A4B43 /* Pods-AzmoonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzmoonUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AzmoonUITests/Pods-AzmoonUITests.release.xcconfig"; sourceTree = "<group>"; };
+		632AE71F90F26C699DA09DFA /* Pods-AzmoonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzmoonUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AzmoonUITests/Pods-AzmoonUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		685F8F39995B9D11269014E6 /* Pods_Azmoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Azmoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9118F8485DD83803DDCD4D34 /* Pods_AzmoonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AzmoonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F2CD6D6F0305E64755E7EAA /* Pods-Azmoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Azmoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Azmoon/Pods-Azmoon.debug.xcconfig"; sourceTree = "<group>"; };
+		9F34120EA31E36275CBBB900 /* Pods-AzmoonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzmoonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AzmoonTests/Pods-AzmoonTests.release.xcconfig"; sourceTree = "<group>"; };
+		A8B0DACCA332191293DCCF0A /* Pods-AzmoonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzmoonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AzmoonTests/Pods-AzmoonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF224EB6FF7B9BE78160BEB3 /* Pods_AzmoonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AzmoonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F7A2DF21D50CD400987DBE /* Azmoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Azmoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F7A2E221D50CD400987DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F7A2E421D50CD400987DBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +63,10 @@
 		D3F7A2FE21D50CD500987DBE /* AzmoonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AzmoonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F7A30221D50CD500987DBE /* AzmoonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzmoonUITests.swift; sourceTree = "<group>"; };
 		D3F7A30421D50CD500987DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3F7A31021D511D100987DBE /* Add.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
+		D3F7A31221D5133900987DBE /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		D3F7A31421D51F7200987DBE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D3F7A31621D51FE800987DBE /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8DE15AABC704EAF26530E6 /* Pods_Azmoon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7291BB2469B4128714D6F6 /* Pods_AzmoonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +90,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16C9AFB632AF73BF7F5C839C /* Pods_AzmoonUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03E3F0F6A64132BACE335955 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				685F8F39995B9D11269014E6 /* Pods_Azmoon.framework */,
+				9118F8485DD83803DDCD4D34 /* Pods_AzmoonTests.framework */,
+				BF224EB6FF7B9BE78160BEB3 /* Pods_AzmoonUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		10598C37D8E4783780F21869 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F2CD6D6F0305E64755E7EAA /* Pods-Azmoon.debug.xcconfig */,
+				184CA40229660FC70A36D278 /* Pods-Azmoon.release.xcconfig */,
+				A8B0DACCA332191293DCCF0A /* Pods-AzmoonTests.debug.xcconfig */,
+				9F34120EA31E36275CBBB900 /* Pods-AzmoonTests.release.xcconfig */,
+				632AE71F90F26C699DA09DFA /* Pods-AzmoonUITests.debug.xcconfig */,
+				3A80A443350B6A5DD07A4B43 /* Pods-AzmoonUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D3F7A2D621D50CD400987DBE = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +127,8 @@
 				D3F7A2F621D50CD500987DBE /* AzmoonTests */,
 				D3F7A30121D50CD500987DBE /* AzmoonUITests */,
 				D3F7A2E021D50CD400987DBE /* Products */,
+				10598C37D8E4783780F21869 /* Pods */,
+				03E3F0F6A64132BACE335955 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +145,16 @@
 		D3F7A2E121D50CD400987DBE /* Azmoon */ = {
 			isa = PBXGroup;
 			children = (
+				D3F7A31021D511D100987DBE /* Add.storyboard */,
+				D3F7A31221D5133900987DBE /* AddViewController.swift */,
 				D3F7A2E221D50CD400987DBE /* AppDelegate.swift */,
-				D3F7A2E421D50CD400987DBE /* ViewController.swift */,
-				D3F7A2E621D50CD400987DBE /* Main.storyboard */,
 				D3F7A2E921D50CD500987DBE /* Assets.xcassets */,
-				D3F7A2EB21D50CD500987DBE /* LaunchScreen.storyboard */,
 				D3F7A2EE21D50CD500987DBE /* Info.plist */,
+				D3F7A2EB21D50CD500987DBE /* LaunchScreen.storyboard */,
+				D3F7A2E621D50CD400987DBE /* Main.storyboard */,
+				D3F7A2E421D50CD400987DBE /* ViewController.swift */,
+				D3F7A31421D51F7200987DBE /* RegisterViewController.swift */,
+				D3F7A31621D51FE800987DBE /* Register.storyboard */,
 			);
 			path = Azmoon;
 			sourceTree = "<group>";
@@ -132,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3F7A30721D50CD500987DBE /* Build configuration list for PBXNativeTarget "Azmoon" */;
 			buildPhases = (
+				8D3BE8AC12AEF670204C2892 /* [CP] Check Pods Manifest.lock */,
 				D3F7A2DB21D50CD400987DBE /* Sources */,
 				D3F7A2DC21D50CD400987DBE /* Frameworks */,
 				D3F7A2DD21D50CD400987DBE /* Resources */,
+				84CCAE642FFD27A75101B673 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3F7A30A21D50CD500987DBE /* Build configuration list for PBXNativeTarget "AzmoonTests" */;
 			buildPhases = (
+				44BAAA4CB03896E2D2BDEE6D /* [CP] Check Pods Manifest.lock */,
 				D3F7A2EF21D50CD500987DBE /* Sources */,
 				D3F7A2F021D50CD500987DBE /* Frameworks */,
 				D3F7A2F121D50CD500987DBE /* Resources */,
@@ -167,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3F7A30D21D50CD500987DBE /* Build configuration list for PBXNativeTarget "AzmoonUITests" */;
 			buildPhases = (
+				90179CB3C5171AD4132CB3D4 /* [CP] Check Pods Manifest.lock */,
 				D3F7A2FA21D50CD500987DBE /* Sources */,
 				D3F7A2FB21D50CD500987DBE /* Frameworks */,
 				D3F7A2FC21D50CD500987DBE /* Resources */,
@@ -231,7 +287,9 @@
 			files = (
 				D3F7A2ED21D50CD500987DBE /* LaunchScreen.storyboard in Resources */,
 				D3F7A2EA21D50CD500987DBE /* Assets.xcassets in Resources */,
+				D3F7A31121D511D100987DBE /* Add.storyboard in Resources */,
 				D3F7A2E821D50CD400987DBE /* Main.storyboard in Resources */,
+				D3F7A31721D51FE800987DBE /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +309,103 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		44BAAA4CB03896E2D2BDEE6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AzmoonTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84CCAE642FFD27A75101B673 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Azmoon/Pods-Azmoon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftIcons/SwiftIcons.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIcons.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSDropDown.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Azmoon/Pods-Azmoon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D3BE8AC12AEF670204C2892 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Azmoon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90179CB3C5171AD4132CB3D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AzmoonUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D3F7A2DB21D50CD400987DBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -258,6 +413,8 @@
 			files = (
 				D3F7A2E521D50CD400987DBE /* ViewController.swift in Sources */,
 				D3F7A2E321D50CD400987DBE /* AppDelegate.swift in Sources */,
+				D3F7A31321D5133900987DBE /* AddViewController.swift in Sources */,
+				D3F7A31521D51F7200987DBE /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +587,7 @@
 		};
 		D3F7A30821D50CD500987DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F2CD6D6F0305E64755E7EAA /* Pods-Azmoon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +606,7 @@
 		};
 		D3F7A30921D50CD500987DBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 184CA40229660FC70A36D278 /* Pods-Azmoon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +625,7 @@
 		};
 		D3F7A30B21D50CD500987DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8B0DACCA332191293DCCF0A /* Pods-AzmoonTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +647,7 @@
 		};
 		D3F7A30C21D50CD500987DBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F34120EA31E36275CBBB900 /* Pods-AzmoonTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +669,7 @@
 		};
 		D3F7A30E21D50CD500987DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 632AE71F90F26C699DA09DFA /* Pods-AzmoonUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +690,7 @@
 		};
 		D3F7A30F21D50CD500987DBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A80A443350B6A5DD07A4B43 /* Pods-AzmoonUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
