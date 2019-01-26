@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="QuestionEntity" representedClassName="QuestionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="is_optional" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 32" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="number_of_options" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="option1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="option2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="option3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="option4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="option5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="option6" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="family_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="father_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="is_man" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="national_code" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone_number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="send_sms" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="QuestionEntity" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="UserEntity" positionX="-54" positionY="9" width="128" height="195"/>
+    </elements>
+</model>

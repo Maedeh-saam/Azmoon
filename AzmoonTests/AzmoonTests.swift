@@ -20,6 +20,10 @@ class AzmoonTests: XCTestCase {
     }
 
     func testExample() {
+        let r =  UserDb().Insert(name: "Mostafa", familyName: "Pourghanbar", fatherName: "Mehdi", isMan: true, nationalCode: 2700028341, username: "Mostafa341", password: "123456", sendSms: false)
+        
+            assert(r)
+
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }

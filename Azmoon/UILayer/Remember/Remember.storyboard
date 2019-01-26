@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Remember View Controller-->
+        <scene sceneID="Lae-sF-Ntr">
+            <objects>
+                <viewController storyboardIdentifier="RememberViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xic-Dm-dln" customClass="RememberViewController" customModule="Azmoon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Amc-v2-LlA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Jg-44-bY9" userLabel="phoneNumberTextField">
+                                <rect key="frame" x="8" y="110" width="359" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gu1-Va-blz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5Q-Gl-QhC">
+                                <rect key="frame" x="137.5" y="629" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OhD-hE-sgV"/>
+                                    <constraint firstAttribute="width" constant="100" id="xaQ-Sr-Pne"/>
+                                </constraints>
+                                <state key="normal" title="بازگشت"/>
+                                <connections>
+                                    <action selector="returnRemButton:" destination="Xic-Dm-dln" eventType="touchUpInside" id="gPi-wN-so2"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTq-N2-qSF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="oyW-ie-Rza"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="سامانه آزمون" id="oXf-Mg-JaN"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره تلفن :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9R-98-wZl">
+                                <rect key="frame" x="267" y="72" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="47o-3Y-83t"/>
+                                    <constraint firstAttribute="height" constant="30" id="QWf-i6-7aE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k3-L0-7MR">
+                                <rect key="frame" x="137.5" y="318.5" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5zd-TH-Sac"/>
+                                    <constraint firstAttribute="width" constant="100" id="6a4-nl-3Rn"/>
+                                </constraints>
+                                <state key="normal" title="ارسال پیامک"/>
+                                <connections>
+                                    <action selector="sendSms:" destination="Xic-Dm-dln" eventType="touchUpInside" id="gUS-vu-hjL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Jg-44-bY9" firstAttribute="top" secondItem="U9R-98-wZl" secondAttribute="bottom" constant="8" id="1kC-r5-v5L"/>
+                            <constraint firstItem="lTq-N2-qSF" firstAttribute="top" secondItem="b7z-uT-gsE" secondAttribute="top" id="AOW-P9-G9T"/>
+                            <constraint firstItem="b7z-uT-gsE" firstAttribute="trailing" secondItem="7Jg-44-bY9" secondAttribute="trailing" constant="8" id="F45-UL-OaP"/>
+                            <constraint firstItem="b7z-uT-gsE" firstAttribute="trailing" secondItem="U9R-98-wZl" secondAttribute="trailing" constant="8" id="TGK-yT-mMj"/>
+                            <constraint firstItem="U9R-98-wZl" firstAttribute="top" secondItem="lTq-N2-qSF" secondAttribute="bottom" constant="8" id="TH1-Eg-lfi"/>
+                            <constraint firstItem="7Jg-44-bY9" firstAttribute="leading" secondItem="b7z-uT-gsE" secondAttribute="leading" constant="8" id="X0Y-Bg-j1l"/>
+                            <constraint firstItem="1k3-L0-7MR" firstAttribute="centerY" secondItem="Amc-v2-LlA" secondAttribute="centerY" id="ZeC-F2-cab"/>
+                            <constraint firstItem="b7z-uT-gsE" firstAttribute="bottom" secondItem="N5Q-Gl-QhC" secondAttribute="bottom" constant="8" id="dPd-kP-twk"/>
+                            <constraint firstItem="lTq-N2-qSF" firstAttribute="leading" secondItem="b7z-uT-gsE" secondAttribute="leading" id="ji5-Oq-Blf"/>
+                            <constraint firstItem="lTq-N2-qSF" firstAttribute="trailing" secondItem="b7z-uT-gsE" secondAttribute="trailing" id="kaJ-mm-bMr"/>
+                            <constraint firstItem="N5Q-Gl-QhC" firstAttribute="centerX" secondItem="Amc-v2-LlA" secondAttribute="centerX" id="moI-jB-1rd"/>
+                            <constraint firstItem="1k3-L0-7MR" firstAttribute="centerX" secondItem="Amc-v2-LlA" secondAttribute="centerX" id="xWa-pt-AV7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b7z-uT-gsE"/>
+                    </view>
+                    <connections>
+                        <outlet property="phoneNumberTextField" destination="7Jg-44-bY9" id="Bxa-Yu-She"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6LA-iI-HBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="73"/>
+        </scene>
+    </scenes>
+</document>

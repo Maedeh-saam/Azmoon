@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="Azmoon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nkz-hg-QcI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="uRB-7Z-Snm"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="منو" id="YcN-9i-3P6"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jEi-1m-V5l" userLabel="Stack View 1">
+                                <rect key="frame" x="8" y="72" width="343" height="360"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="r4C-Kh-kFA" userLabel="Stack View 2">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ia0-ix-SlM" userLabel="ListButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="120"/>
+                                                <state key="normal" title="ListButton" image="list"/>
+                                                <connections>
+                                                    <action selector="listButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="keH-n6-SFJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSz-Lb-Cfl" userLabel="AddButton">
+                                                <rect key="frame" x="181.5" y="0.0" width="161.5" height="120"/>
+                                                <state key="normal" title="AddButton" image="add"/>
+                                                <connections>
+                                                    <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61m-Do-zkX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="0rp-tw-Fzo"/>
+                                            <constraint firstItem="Ia0-ix-SlM" firstAttribute="height" secondItem="zSz-Lb-Cfl" secondAttribute="height" id="x0x-Ln-Yq3"/>
+                                            <constraint firstItem="zSz-Lb-Cfl" firstAttribute="width" secondItem="Ia0-ix-SlM" secondAttribute="width" id="zct-Jd-x9s"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6lX-3z-id7" userLabel="Stack View 3">
+                                        <rect key="frame" x="0.0" y="120" width="343" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcV-OP-cgL">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="40"/>
+                                                <state key="normal" title="لیست سوالات"/>
+                                                <connections>
+                                                    <action selector="list:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tAE-ww-8Qo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQo-dt-aCb" userLabel="Add Question">
+                                                <rect key="frame" x="181.5" y="0.0" width="161.5" height="40"/>
+                                                <state key="normal" title="ایجاد سوال"/>
+                                                <connections>
+                                                    <action selector="addQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C9v-nK-MPK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="KcV-OP-cgL" firstAttribute="height" secondItem="rQo-dt-aCb" secondAttribute="height" id="YY0-3C-Csr"/>
+                                            <constraint firstAttribute="height" constant="40" id="nFR-OF-ekQ"/>
+                                            <constraint firstItem="KcV-OP-cgL" firstAttribute="width" secondItem="rQo-dt-aCb" secondAttribute="width" id="yDs-ru-V4P"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fth-TH-xTo" userLabel="Stack View space">
+                                        <rect key="frame" x="0.0" y="160" width="343" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2lW-EP-uwR"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RaL-qS-UGG" userLabel="Stack View 4">
+                                        <rect key="frame" x="0.0" y="200" width="343" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJV-9n-8hc">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="120"/>
+                                                <state key="normal" title="ReportButton" image="report"/>
+                                                <connections>
+                                                    <action selector="reportButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l4c-Lx-K7c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xma-fb-vFS">
+                                                <rect key="frame" x="181.5" y="0.0" width="161.5" height="120"/>
+                                                <state key="normal" title="AnswerButton" image="answering"/>
+                                                <connections>
+                                                    <action selector="answerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="80I-4u-0Vk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Xma-fb-vFS" firstAttribute="width" secondItem="cJV-9n-8hc" secondAttribute="width" id="ULa-i4-Ky4"/>
+                                            <constraint firstAttribute="height" constant="120" id="ghq-I3-IoY"/>
+                                            <constraint firstItem="Xma-fb-vFS" firstAttribute="height" secondItem="cJV-9n-8hc" secondAttribute="height" id="r6a-5R-mKP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Iac-fZ-Pn2" userLabel="Stack View 5">
+                                        <rect key="frame" x="0.0" y="320" width="343" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJo-Yy-Wzn">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="40"/>
+                                                <state key="normal" title="گزارشات"/>
+                                                <connections>
+                                                    <action selector="reports:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iVa-lS-YRQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0h7-r3-0qr">
+                                                <rect key="frame" x="181.5" y="0.0" width="161.5" height="40"/>
+                                                <state key="normal" title="پاسخ دادن"/>
+                                                <connections>
+                                                    <action selector="answering:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAH-2a-VUH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="0h7-r3-0qr" firstAttribute="width" secondItem="hJo-Yy-Wzn" secondAttribute="width" id="EqU-Ty-3vz"/>
+                                            <constraint firstItem="0h7-r3-0qr" firstAttribute="height" secondItem="hJo-Yy-Wzn" secondAttribute="height" id="crR-rx-AOR"/>
+                                            <constraint firstAttribute="height" constant="40" id="v5i-kp-Ta9"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="r4C-Kh-kFA" secondAttribute="trailing" id="4HU-ch-hdr"/>
+                                    <constraint firstItem="Iac-fZ-Pn2" firstAttribute="leading" secondItem="jEi-1m-V5l" secondAttribute="leading" id="9Bn-oY-j7a"/>
+                                    <constraint firstItem="RaL-qS-UGG" firstAttribute="leading" secondItem="jEi-1m-V5l" secondAttribute="leading" id="Hf7-H7-uyU"/>
+                                    <constraint firstItem="RaL-qS-UGG" firstAttribute="top" secondItem="Fth-TH-xTo" secondAttribute="bottom" id="M4U-DG-fiW"/>
+                                    <constraint firstAttribute="trailing" secondItem="6lX-3z-id7" secondAttribute="trailing" id="Ngb-Hw-JB4"/>
+                                    <constraint firstItem="Iac-fZ-Pn2" firstAttribute="top" secondItem="RaL-qS-UGG" secondAttribute="bottom" id="OLT-gu-fV0"/>
+                                    <constraint firstAttribute="trailing" secondItem="RaL-qS-UGG" secondAttribute="trailing" id="ONL-dJ-9E4"/>
+                                    <constraint firstItem="r4C-Kh-kFA" firstAttribute="top" secondItem="jEi-1m-V5l" secondAttribute="top" id="RiF-OO-kKE"/>
+                                    <constraint firstItem="6lX-3z-id7" firstAttribute="top" secondItem="r4C-Kh-kFA" secondAttribute="bottom" id="Tfv-Wq-d4l"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fth-TH-xTo" secondAttribute="trailing" id="UZL-tK-4Q6"/>
+                                    <constraint firstItem="RaL-qS-UGG" firstAttribute="leading" secondItem="jEi-1m-V5l" secondAttribute="leadingMargin" id="WQZ-sx-N2s"/>
+                                    <constraint firstItem="RaL-qS-UGG" firstAttribute="trailing" secondItem="jEi-1m-V5l" secondAttribute="trailingMargin" id="ZLM-FC-s9G"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iac-fZ-Pn2" secondAttribute="trailing" id="fbk-1H-6Vn"/>
+                                    <constraint firstItem="Fth-TH-xTo" firstAttribute="leading" secondItem="jEi-1m-V5l" secondAttribute="leading" id="nW4-Es-vbV"/>
+                                    <constraint firstItem="6lX-3z-id7" firstAttribute="leading" secondItem="jEi-1m-V5l" secondAttribute="leading" id="o7e-Ga-And"/>
+                                    <constraint firstItem="Fth-TH-xTo" firstAttribute="top" secondItem="6lX-3z-id7" secondAttribute="bottom" id="oIP-4o-O6t"/>
+                                    <constraint firstItem="r4C-Kh-kFA" firstAttribute="leading" secondItem="jEi-1m-V5l" secondAttribute="leading" id="t5x-UF-BcM"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdj-rq-EqV">
+                                <rect key="frame" x="165.5" y="617" width="44" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="JPO-9A-tw1"/>
+                                    <constraint firstAttribute="height" constant="30" id="PTY-Wx-oNL"/>
+                                </constraints>
+                                <state key="normal" title="خروج"/>
+                                <connections>
+                                    <action selector="exitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AK2-Su-PTZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nkz-hg-QcI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Gq-5X-hUb"/>
+                            <constraint firstItem="Nkz-hg-QcI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CPU-AG-gLI"/>
+                            <constraint firstItem="Nkz-hg-QcI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CQE-CM-bIr"/>
+                            <constraint firstItem="Sdj-rq-EqV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NXd-iL-xfY"/>
+                            <constraint firstItem="jEi-1m-V5l" firstAttribute="top" secondItem="Nkz-hg-QcI" secondAttribute="bottom" constant="8" id="T4c-Nm-cZn"/>
+                            <constraint firstItem="jEi-1m-V5l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="aQX-Wt-9CJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jEi-1m-V5l" secondAttribute="trailing" constant="8" id="hDe-4D-R1c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sdj-rq-EqV" secondAttribute="bottom" constant="20" id="uPi-Fx-ik2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="57.121439280359823"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add" width="289" height="175"/>
+        <image name="answering" width="277" height="269"/>
+        <image name="list" width="1280" height="720"/>
+        <image name="report" width="288" height="162"/>
+    </resources>
+</document>
