@@ -292,6 +292,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vko-Ck-dV5">
                                                         <rect key="frame" x="8" y="10" width="359" height="30"/>
                                                         <state key="normal" title="ثبت سوال"/>
+                                                        <connections>
+                                                            <action selector="registraionButton:" destination="37i-jQ-Bor" eventType="touchUpInside" id="fCE-y2-5lm"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -371,12 +374,19 @@
                         <outlet property="backButton" destination="IK7-rb-Faj" id="QFO-ga-weq"/>
                         <outlet property="descriptiveCheckBox" destination="fNR-hL-Cn0" id="i2E-gj-vYv"/>
                         <outlet property="dropdownNumberChoice" destination="hRj-OP-pk0" id="G6x-aM-hxE"/>
+                        <outlet property="numberOfOptionsLabel" destination="xe2-CW-HXb" id="Iuq-kH-pUo"/>
                         <outlet property="numberTextField" destination="hb1-LK-80x" id="Idl-Lu-uYw"/>
+                        <outlet property="option1Label" destination="Qmn-fZ-dPv" id="9VM-bt-Nup"/>
                         <outlet property="option1TextField" destination="dMC-IW-qna" id="baD-6b-NND"/>
+                        <outlet property="option2Label" destination="1cr-5b-BK2" id="F7f-uF-xGu"/>
                         <outlet property="option2TextField" destination="6JD-hI-3eL" id="6Ng-DD-Fxq"/>
+                        <outlet property="option3Label" destination="19L-SZ-7Xi" id="XHQ-8E-bEe"/>
                         <outlet property="option3TextField" destination="LE2-dH-o7v" id="Vu1-Wb-eAa"/>
+                        <outlet property="option4Label" destination="b00-66-wX6" id="3dS-N7-kS6"/>
                         <outlet property="option4TextField" destination="pop-Dg-gmm" id="azu-df-1CM"/>
+                        <outlet property="option5Label" destination="ihE-JW-h7w" id="n05-wp-fz8"/>
                         <outlet property="option5TextField" destination="4l6-Ld-b3k" id="hD4-Eo-j4c"/>
+                        <outlet property="option6Label" destination="B8y-AY-4gL" id="aDs-nY-w34"/>
                         <outlet property="option6TextField" destination="yRd-YM-DXS" id="0aI-9n-dSU"/>
                         <outlet property="optionalCheckBox" destination="DGJ-Fw-CLl" id="FLQ-YT-zlQ"/>
                         <outlet property="titleTextField" destination="QWQ-FZ-qAX" id="r4W-sN-j3F"/>

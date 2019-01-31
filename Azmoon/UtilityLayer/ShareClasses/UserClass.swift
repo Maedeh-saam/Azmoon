@@ -9,7 +9,7 @@ public class UserClass {
     var sendSms : Bool? = nil;
     var phoneNumber : String? = nil;
     
-    init(name : String?,familyName : String?,fatherName : String?, nationalCode : Int?, isMan : Bool?, username : String?, password : String?, sendSms : Bool?, phoneNumber : String?) {
+    init(_ name : String?,_ familyName : String?,_ fatherName : String?,_ nationalCode : Int?,_ isMan : Bool?,_ username : String?, _ password : String?, _ sendSms : Bool?, _ phoneNumber : String?) {
         self.name = name;
         self.familyName = familyName;
         self.fatherName = fatherName;

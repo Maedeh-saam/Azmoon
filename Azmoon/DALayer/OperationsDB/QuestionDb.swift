@@ -34,7 +34,7 @@ public class QuestionDb{
     }
     
     // MARK: Read Method
-    public func Read (input: QuestionFullClass) ->  [QuestionEntity] {
+    public func Read (_ input: QuestionFullClass) ->  [QuestionEntity] {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate;
         let context = appDelegate.persistentContainer.viewContext;

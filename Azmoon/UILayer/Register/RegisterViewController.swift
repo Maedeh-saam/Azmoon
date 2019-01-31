@@ -59,7 +59,7 @@ class RegisterViewController: UIViewController, BEMCheckBoxDelegate, UITextField
         let womanCheckBox = self.womanCheckBox.on;
         let confirmPassword = self.confirmPasswordTextField.text;
         
-        let model = UserClass(name: nameTextField.text ?? "",familyName: familyNameTextField.text ?? "",fatherName: fatherNameTextField.text ?? "",nationalCode: Int(nationalCodeTextField.text ?? "0"),isMan: manCheckBox,username: (usernameTextField.text ?? "").lowercased(),password: passwordTextField.text ?? "", sendSms: smsCheckBox.on,phoneNumber: phoneNumberTextField.text ?? "");
+        let model = UserClass(nameTextField.text ?? "",familyNameTextField.text ?? "",fatherNameTextField.text ?? "",Int(nationalCodeTextField.text ?? "0"), manCheckBox,(usernameTextField.text ?? "").lowercased(), passwordTextField.text ?? "", smsCheckBox.on,phoneNumberTextField.text ?? "");
 
         if(model.name!.isEmpty){
             // toast with a specific duration and position

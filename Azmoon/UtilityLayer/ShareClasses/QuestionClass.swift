@@ -12,7 +12,7 @@ public class QuestionClass {
     var option6 : String? = nil;
     var title : String? = nil;
     
-    init(isOptional : Bool?, number : Int?, numberOfOptions : Int?, option1 : String?, option2 : String?, option3 : String?, option4 : String?, option5 : String?, option6 : String?, title: String?) {
+    init(_ isOptional : Bool?,_ number : Int?,_ numberOfOptions : Int?,_ option1 : String?,_ option2 : String?,_ option3 : String?,_ option4 : String?,_ option5 : String?,_ option6 : String?,_ title: String?) {
         self.isOptional = isOptional;
         self.number = number;
         self.numberOfOptions = numberOfOptions;
@@ -34,7 +34,7 @@ public class QuestionClass {
 }
 
 public class QuestionFullClass : QuestionClass  {
-    var id : Int;
+    var id : Int = 0;
     
     init(id: Int){
         self.id = id;
@@ -42,6 +42,9 @@ public class QuestionFullClass : QuestionClass  {
         super.init()
     }
     
+    override init() {
+        super.init()
+    }
     
 }
 

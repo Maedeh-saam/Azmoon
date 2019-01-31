@@ -22,6 +22,9 @@
 		D309CD3021DE3BE7002542AC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309CD2F21DE3BE7002542AC /* ListTableViewCell.swift */; };
 		D315B0E321FCB6F900F55A19 /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B0E221FCB6F900F55A19 /* AddModel.swift */; };
 		D329EF1021F2099900B389A3 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D329EF0F21F2099900B389A3 /* LoginModel.swift */; };
+		D3851D562200D25E00355DEB /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3851D552200D25E00355DEB /* ListTableViewCell.xib */; };
+		D3851D592200EE2B00355DEB /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3851D582200EE2B00355DEB /* Extentions.swift */; };
+		D3851D5B220347FA00355DEB /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3851D5A220347FA00355DEB /* ListModel.swift */; };
 		D388A0DC21F38953001219B0 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388A0DB21F38953001219B0 /* RegisterModel.swift */; };
 		D388A0E721F4E2F2001219B0 /* UserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388A0E621F4E2F2001219B0 /* UserClass.swift */; };
 		D388A0EB21F86618001219B0 /* RememberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388A0EA21F86618001219B0 /* RememberModel.swift */; };
@@ -84,6 +87,9 @@
 		D309CD2F21DE3BE7002542AC /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		D315B0E221FCB6F900F55A19 /* AddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModel.swift; sourceTree = "<group>"; };
 		D329EF0F21F2099900B389A3 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		D3851D552200D25E00355DEB /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		D3851D582200EE2B00355DEB /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		D3851D5A220347FA00355DEB /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		D388A0DB21F38953001219B0 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		D388A0E621F4E2F2001219B0 /* UserClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClass.swift; sourceTree = "<group>"; };
 		D388A0EA21F86618001219B0 /* RememberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberModel.swift; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 		D329EF1121F20ED000B389A3 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				D3851D572200EE0A00355DEB /* Extentions */,
 				D388A0DF21F4C917001219B0 /* Add */,
 				D388A0E221F4C9BE001219B0 /* AnsQuestions */,
 				D388A0E021F4C95B001219B0 /* List */,
@@ -204,6 +211,14 @@
 				D308027721E8DF9300E8BF83 /* OperationsDB */,
 			);
 			path = DALayer;
+			sourceTree = "<group>";
+		};
+		D3851D572200EE0A00355DEB /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				D3851D582200EE2B00355DEB /* Extentions.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		D388A0DD21F38989001219B0 /* Register */ = {
@@ -240,8 +255,10 @@
 			isa = PBXGroup;
 			children = (
 				D309CD2A21D76DCB002542AC /* List.storyboard */,
-				D309CD2C21D76DED002542AC /* ListViewController.swift */,
+				D3851D5A220347FA00355DEB /* ListModel.swift */,
 				D309CD2F21DE3BE7002542AC /* ListTableViewCell.swift */,
+				D3851D552200D25E00355DEB /* ListTableViewCell.xib */,
+				D309CD2C21D76DED002542AC /* ListViewController.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -463,6 +480,7 @@
 				D3F7A31121D511D100987DBE /* Add.storyboard in Resources */,
 				D3F7A2E821D50CD400987DBE /* Main.storyboard in Resources */,
 				D309CD2B21D76DCB002542AC /* List.storyboard in Resources */,
+				D3851D562200D25E00355DEB /* ListTableViewCell.xib in Resources */,
 				D3FCE95421E3446800751C49 /* AnsQuestions.storyboard in Resources */,
 				D3F7A31721D51FE800987DBE /* Register.storyboard in Resources */,
 			);
@@ -601,7 +619,9 @@
 				D309CD3021DE3BE7002542AC /* ListTableViewCell.swift in Sources */,
 				D3FCE94E21E32DAE00751C49 /* RememberViewController.swift in Sources */,
 				D315B0E321FCB6F900F55A19 /* AddModel.swift in Sources */,
+				D3851D5B220347FA00355DEB /* ListModel.swift in Sources */,
 				D309CD2D21D76DED002542AC /* ListViewController.swift in Sources */,
+				D3851D592200EE2B00355DEB /* Extentions.swift in Sources */,
 				D308026C21E89B7F00E8BF83 /* ReportViewController.swift in Sources */,
 				D388A0DC21F38953001219B0 /* RegisterModel.swift in Sources */,
 				D308026E21E89C0800E8BF83 /* ReportTableViewCell.swift in Sources */,
