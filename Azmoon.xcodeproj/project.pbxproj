@@ -22,6 +22,15 @@
 		D309CD3021DE3BE7002542AC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309CD2F21DE3BE7002542AC /* ListTableViewCell.swift */; };
 		D315B0E321FCB6F900F55A19 /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B0E221FCB6F900F55A19 /* AddModel.swift */; };
 		D329EF1021F2099900B389A3 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D329EF0F21F2099900B389A3 /* LoginModel.swift */; };
+		D3597806221A95A30054CD26 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3597805221A95A30054CD26 /* UserListViewController.swift */; };
+		D3597808221A96D60054CD26 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3597807221A96D60054CD26 /* UserList.storyboard */; };
+		D359780D221AA2490054CD26 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D359780B221AA2490054CD26 /* UserListTableViewCell.swift */; };
+		D359780E221AA2490054CD26 /* UserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D359780C221AA2490054CD26 /* UserListTableViewCell.xib */; };
+		D3597810221AA5D00054CD26 /* UserListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D359780F221AA5D00054CD26 /* UserListModel.swift */; };
+		D3597813221AEAB60054CD26 /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3597812221AEAB60054CD26 /* EditUserViewController.swift */; };
+		D3597815221AEACD0054CD26 /* EditUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3597814221AEACD0054CD26 /* EditUser.storyboard */; };
+		D35F562722071D7500DF246E /* EditQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35F562622071D7500DF246E /* EditQuestion.storyboard */; };
+		D35F562922071DA400DF246E /* EditQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F562822071DA400DF246E /* EditQuestionViewController.swift */; };
 		D3851D562200D25E00355DEB /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3851D552200D25E00355DEB /* ListTableViewCell.xib */; };
 		D3851D592200EE2B00355DEB /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3851D582200EE2B00355DEB /* Extentions.swift */; };
 		D3851D5B220347FA00355DEB /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3851D5A220347FA00355DEB /* ListModel.swift */; };
@@ -87,6 +96,15 @@
 		D309CD2F21DE3BE7002542AC /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		D315B0E221FCB6F900F55A19 /* AddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModel.swift; sourceTree = "<group>"; };
 		D329EF0F21F2099900B389A3 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		D3597805221A95A30054CD26 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		D3597807221A96D60054CD26 /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
+		D359780B221AA2490054CD26 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
+		D359780C221AA2490054CD26 /* UserListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTableViewCell.xib; sourceTree = "<group>"; };
+		D359780F221AA5D00054CD26 /* UserListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListModel.swift; sourceTree = "<group>"; };
+		D3597812221AEAB60054CD26 /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
+		D3597814221AEACD0054CD26 /* EditUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditUser.storyboard; sourceTree = "<group>"; };
+		D35F562622071D7500DF246E /* EditQuestion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditQuestion.storyboard; sourceTree = "<group>"; };
+		D35F562822071DA400DF246E /* EditQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionViewController.swift; sourceTree = "<group>"; };
 		D3851D552200D25E00355DEB /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		D3851D582200EE2B00355DEB /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		D3851D5A220347FA00355DEB /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
@@ -192,15 +210,18 @@
 		D329EF1121F20ED000B389A3 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
-				D3851D572200EE0A00355DEB /* Extentions */,
 				D388A0DF21F4C917001219B0 /* Add */,
 				D388A0E221F4C9BE001219B0 /* AnsQuestions */,
+				D35F562522071D4100DF246E /* EditQuestion */,
+				D3597811221AEA7E0054CD26 /* EditUser */,
+				D3851D572200EE0A00355DEB /* Extentions */,
 				D388A0E021F4C95B001219B0 /* List */,
 				D329EF0E21F2094000B389A3 /* Login */,
 				D388A0E321F4CAE5001219B0 /* Main */,
 				D388A0DD21F38989001219B0 /* Register */,
 				D388A0DE21F4C8E9001219B0 /* Remember */,
 				D388A0E121F4C98D001219B0 /* Report */,
+				D3597802221A945B0054CD26 /* UserList */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
@@ -211,6 +232,36 @@
 				D308027721E8DF9300E8BF83 /* OperationsDB */,
 			);
 			path = DALayer;
+			sourceTree = "<group>";
+		};
+		D3597802221A945B0054CD26 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				D3597807221A96D60054CD26 /* UserList.storyboard */,
+				D359780F221AA5D00054CD26 /* UserListModel.swift */,
+				D359780B221AA2490054CD26 /* UserListTableViewCell.swift */,
+				D359780C221AA2490054CD26 /* UserListTableViewCell.xib */,
+				D3597805221A95A30054CD26 /* UserListViewController.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		D3597811221AEA7E0054CD26 /* EditUser */ = {
+			isa = PBXGroup;
+			children = (
+				D3597812221AEAB60054CD26 /* EditUserViewController.swift */,
+				D3597814221AEACD0054CD26 /* EditUser.storyboard */,
+			);
+			path = EditUser;
+			sourceTree = "<group>";
+		};
+		D35F562522071D4100DF246E /* EditQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				D35F562622071D7500DF246E /* EditQuestion.storyboard */,
+				D35F562822071DA400DF246E /* EditQuestionViewController.swift */,
+			);
+			path = EditQuestion;
 			sourceTree = "<group>";
 		};
 		D3851D572200EE0A00355DEB /* Extentions */ = {
@@ -472,14 +523,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35F562722071D7500DF246E /* EditQuestion.storyboard in Resources */,
 				D3F7A2ED21D50CD500987DBE /* LaunchScreen.storyboard in Resources */,
 				D3FCE95821E3454300751C49 /* Report.storyboard in Resources */,
 				D3FCE95021E32DC700751C49 /* Remember.storyboard in Resources */,
 				D3F7A2EA21D50CD500987DBE /* Assets.xcassets in Resources */,
+				D3597815221AEACD0054CD26 /* EditUser.storyboard in Resources */,
 				D3FCE94C21E0FBE100751C49 /* Login.storyboard in Resources */,
 				D3F7A31121D511D100987DBE /* Add.storyboard in Resources */,
 				D3F7A2E821D50CD400987DBE /* Main.storyboard in Resources */,
+				D359780E221AA2490054CD26 /* UserListTableViewCell.xib in Resources */,
 				D309CD2B21D76DCB002542AC /* List.storyboard in Resources */,
+				D3597808221A96D60054CD26 /* UserList.storyboard in Resources */,
 				D3851D562200D25E00355DEB /* ListTableViewCell.xib in Resources */,
 				D3FCE95421E3446800751C49 /* AnsQuestions.storyboard in Resources */,
 				D3F7A31721D51FE800987DBE /* Register.storyboard in Resources */,
@@ -611,16 +666,21 @@
 				D3FCE94A21E0FBCA00751C49 /* LoginViewController.swift in Sources */,
 				D308027221E8A0FA00E8BF83 /* AnsQuestionsTableViewCell.swift in Sources */,
 				D3F7A2E521D50CD400987DBE /* MainViewController.swift in Sources */,
+				D3597806221A95A30054CD26 /* UserListViewController.swift in Sources */,
 				D329EF1021F2099900B389A3 /* LoginModel.swift in Sources */,
 				D3F7A2E321D50CD400987DBE /* AppDelegate.swift in Sources */,
 				D308027B21EBA5BB00E8BF83 /* UserDb.swift in Sources */,
+				D35F562922071DA400DF246E /* EditQuestionViewController.swift in Sources */,
 				D388A0EB21F86618001219B0 /* RememberModel.swift in Sources */,
 				D3F7A31321D5133900987DBE /* AddViewController.swift in Sources */,
+				D3597810221AA5D00054CD26 /* UserListModel.swift in Sources */,
 				D309CD3021DE3BE7002542AC /* ListTableViewCell.swift in Sources */,
 				D3FCE94E21E32DAE00751C49 /* RememberViewController.swift in Sources */,
 				D315B0E321FCB6F900F55A19 /* AddModel.swift in Sources */,
 				D3851D5B220347FA00355DEB /* ListModel.swift in Sources */,
+				D359780D221AA2490054CD26 /* UserListTableViewCell.swift in Sources */,
 				D309CD2D21D76DED002542AC /* ListViewController.swift in Sources */,
+				D3597813221AEAB60054CD26 /* EditUserViewController.swift in Sources */,
 				D3851D592200EE2B00355DEB /* Extentions.swift in Sources */,
 				D308026C21E89B7F00E8BF83 /* ReportViewController.swift in Sources */,
 				D388A0DC21F38953001219B0 /* RegisterModel.swift in Sources */,
