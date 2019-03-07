@@ -72,6 +72,7 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="QWQ-FZ-qAX" secondAttribute="bottom" constant="8" id="4RS-4C-JDc"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="9hM-7m-SiF"/>
                                                     <constraint firstAttribute="trailing" secondItem="QWQ-FZ-qAX" secondAttribute="trailing" constant="8" id="9up-UW-hsf"/>
                                                     <constraint firstItem="QWQ-FZ-qAX" firstAttribute="leading" secondItem="961-9B-dUa" secondAttribute="leading" constant="8" id="Q8u-0P-AtJ"/>
                                                     <constraint firstItem="TiX-uj-Tbd" firstAttribute="top" secondItem="961-9B-dUa" secondAttribute="top" constant="8" id="Ysw-gx-YDr"/>
@@ -88,7 +89,7 @@
                                                         <subviews>
                                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNR-hL-Cn0" customClass="BEMCheckBox">
                                                                 <rect key="frame" x="0.0" y="0.0" width="57.5" height="50"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تشریحی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bIa-qH-HHE">
                                                                 <rect key="frame" x="72.5" y="0.0" width="61.5" height="50"/>
@@ -98,7 +99,7 @@
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGJ-Fw-CLl" customClass="BEMCheckBox">
                                                                 <rect key="frame" x="149" y="0.0" width="57.5" height="50"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="گزینه ای " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wKv-In-bdq">
                                                                 <rect key="frame" x="221.5" y="0.0" width="61" height="50"/>

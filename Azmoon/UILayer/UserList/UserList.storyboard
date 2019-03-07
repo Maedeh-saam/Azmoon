@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User List View Controller-->
+        <scene sceneID="bJY-UU-arr">
+            <objects>
+                <viewController storyboardIdentifier="UserListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mCq-MP-jzo" customClass="UserListViewController" customModule="Azmoon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rjt-zF-yZr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbd-Pd-yMt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لیست کاربران" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bo2-3x-etT">
+                                        <rect key="frame" x="137.5" y="11" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="406-FP-ATZ"/>
+                                            <constraint firstAttribute="height" constant="30" id="VQQ-Qm-ati"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znm-iY-IaN">
+                                        <rect key="frame" x="8" y="8" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="1bu-ol-bft"/>
+                                            <constraint firstAttribute="height" constant="30" id="1gQ-Bk-S6q"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="backtoMain:" destination="mCq-MP-jzo" eventType="touchUpInside" id="Qq8-oq-nYl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Bo2-3x-etT" firstAttribute="top" secondItem="Bbd-Pd-yMt" secondAttribute="top" constant="11" id="0tv-bQ-zh0"/>
+                                    <constraint firstItem="Bo2-3x-etT" firstAttribute="centerX" secondItem="Bbd-Pd-yMt" secondAttribute="centerX" id="DgJ-SG-IdX"/>
+                                    <constraint firstAttribute="height" constant="44" id="PbM-sw-S8I"/>
+                                    <constraint firstItem="znm-iY-IaN" firstAttribute="top" secondItem="Bbd-Pd-yMt" secondAttribute="top" constant="8" id="mKp-x0-bp3"/>
+                                    <constraint firstItem="znm-iY-IaN" firstAttribute="leading" secondItem="Bbd-Pd-yMt" secondAttribute="leading" constant="8" id="o2f-3f-jTm"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Irb-VL-p8S" userLabel="User List Table View">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="iPY-Xi-VDt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Bbd-Pd-yMt" firstAttribute="leading" secondItem="WxK-px-hyR" secondAttribute="leading" id="3Nn-79-1Os"/>
+                            <constraint firstItem="Irb-VL-p8S" firstAttribute="leading" secondItem="WxK-px-hyR" secondAttribute="leading" id="EAh-fm-xcV"/>
+                            <constraint firstItem="Bbd-Pd-yMt" firstAttribute="trailing" secondItem="WxK-px-hyR" secondAttribute="trailing" id="Hry-Gi-OU5"/>
+                            <constraint firstItem="Irb-VL-p8S" firstAttribute="trailing" secondItem="WxK-px-hyR" secondAttribute="trailing" id="bjS-Ql-2cQ"/>
+                            <constraint firstItem="Irb-VL-p8S" firstAttribute="bottom" secondItem="WxK-px-hyR" secondAttribute="bottom" id="he0-o4-byi"/>
+                            <constraint firstItem="Irb-VL-p8S" firstAttribute="top" secondItem="Bbd-Pd-yMt" secondAttribute="bottom" constant="8" id="nIe-UL-r0U"/>
+                            <constraint firstItem="Bbd-Pd-yMt" firstAttribute="top" secondItem="WxK-px-hyR" secondAttribute="top" id="pkO-08-6Xs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WxK-px-hyR"/>
+                    </view>
+                    <connections>
+                        <outlet property="back" destination="znm-iY-IaN" id="43n-Sk-s6q"/>
+                        <outlet property="userListSearchBar" destination="iPY-Xi-VDt" id="ajN-tA-fPh"/>
+                        <outlet property="userListTableView" destination="Irb-VL-p8S" id="8lk-nB-NwM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cF-Uc-z2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.8" y="119.1904047976012"/>
+        </scene>
+    </scenes>
+</document>

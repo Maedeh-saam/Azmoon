@@ -67,7 +67,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BTM-Ih-Eso" firstAttribute="bottom" secondItem="7sY-vw-Esv" secondAttribute="bottom" id="BeU-rM-IJk"/>
                             <constraint firstItem="IOa-8b-sPp" firstAttribute="top" secondItem="7sY-vw-Esv" secondAttribute="top" id="EhA-BO-aOZ"/>

@@ -3,13 +3,20 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var AddButtonPic: UIButton!
-    
+    @IBOutlet weak var ListButtonPic: UIButton!
+    @IBOutlet weak var AnswerButtonPic: UIButton!
+    @IBOutlet weak var ReportButtonPic: UIButton!
+    @IBOutlet weak var UserListButtonPic: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        AddButtonPic.setIcon(icon: .openIconic(.clipboard), iconSize: 70, color: .orange, forState: .normal)
+        AddButtonPic.setIcon(icon: .typIcons(.documentAdd), iconSize: 80, color: .orange, forState: .normal)
+        ListButtonPic.setIcon(icon: .openIconic(.clipboard), iconSize: 70, color: .orange, forState: .normal)
+        AnswerButtonPic.setIcon(icon: .fontAwesomeRegular(.edit), iconSize: 70, color: .orange, forState: .normal)
+        ReportButtonPic.setIcon(icon: .typIcons(.clipboard), iconSize: 80, color: .orange, forState: .normal)
+        UserListButtonPic.setIcon(icon: .fontAwesomeRegular(.user), iconSize: 70, color: .orange, forState: .normal)
     }
     
     
@@ -96,6 +103,22 @@ class MainViewController: UIViewController {
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "AnsQuestionsViewController") as! AnsQuestionsViewController
         self.present(newViewController, animated: true, completion: nil)
         
+    }
+    
+    @IBAction func userListButton(_ sender: UIButton) {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "UserList", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
+        self.present(newViewController, animated: true, completion: nil)
+        
+    }
+    
+    
+    @IBAction func userList(_ sender: UIButton) {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "UserList", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
+        self.present(newViewController, animated: true, completion: nil)
     }
     
 }

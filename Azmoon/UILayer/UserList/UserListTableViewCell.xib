@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="99" id="KGk-i7-Jjw" customClass="UserListTableViewCell" customModule="Azmoon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="116.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZZ-e7-LkF">
+                        <rect key="frame" x="176" y="63" width="150" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="LJ9-cb-Ipc"/>
+                            <constraint firstAttribute="height" constant="30" id="en0-T8-mfW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xb-C2-mTv" userLabel="View Button">
+                        <rect key="frame" x="16" y="5" width="50" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Ofw-WG-8cS"/>
+                            <constraint firstAttribute="height" constant="30" id="ruC-85-355"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spy-Mv-rbn" userLabel="Edit Button">
+                        <rect key="frame" x="16" y="43" width="50" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="CNU-S7-HqV"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHu-T0-PGT" userLabel="Delete Button">
+                        <rect key="frame" x="16" y="81.5" width="50" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="2BA-dT-A9J"/>
+                            <constraint firstAttribute="width" constant="50" id="CWr-nu-i1X"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام کاربری :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyr-kg-6G9" userLabel="نام کاربری">
+                        <rect key="frame" x="236" y="19" width="90" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="6DI-pd-mu4"/>
+                            <constraint firstAttribute="height" constant="30" id="GKh-C9-C5H"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fyr-kg-6G9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="7lG-xr-zoD"/>
+                    <constraint firstItem="3xb-C2-mTv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Bbq-OG-RUb"/>
+                    <constraint firstItem="spy-Mv-rbn" firstAttribute="width" secondItem="3xb-C2-mTv" secondAttribute="width" id="FSc-0F-CsT"/>
+                    <constraint firstItem="spy-Mv-rbn" firstAttribute="width" secondItem="PHu-T0-PGT" secondAttribute="width" id="PY2-cE-HEq"/>
+                    <constraint firstItem="spy-Mv-rbn" firstAttribute="top" secondItem="3xb-C2-mTv" secondAttribute="bottom" constant="8" id="QGU-M8-gU6"/>
+                    <constraint firstItem="EZZ-e7-LkF" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="V0k-hE-BkE"/>
+                    <constraint firstItem="3xb-C2-mTv" firstAttribute="width" secondItem="PHu-T0-PGT" secondAttribute="width" id="Ve3-3W-Uxe"/>
+                    <constraint firstItem="fyr-kg-6G9" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Zd1-HF-bV1"/>
+                    <constraint firstItem="PHu-T0-PGT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="eFJ-ul-jC6"/>
+                    <constraint firstItem="EZZ-e7-LkF" firstAttribute="top" secondItem="fyr-kg-6G9" secondAttribute="bottom" constant="14" id="gDu-xR-YC6"/>
+                    <constraint firstItem="3xb-C2-mTv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="i1f-l3-FuZ"/>
+                    <constraint firstItem="spy-Mv-rbn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="qpW-io-rgX"/>
+                    <constraint firstAttribute="bottom" secondItem="PHu-T0-PGT" secondAttribute="bottom" constant="5" id="zk1-N4-LHB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="deleteUserButton" destination="PHu-T0-PGT" id="tQU-L2-BBM"/>
+                <outlet property="editUserButton" destination="spy-Mv-rbn" id="mOf-Aa-NW7"/>
+                <outlet property="personsUsernameLabel" destination="EZZ-e7-LkF" id="myj-ef-RYm"/>
+                <outlet property="viewUserButton" destination="3xb-C2-mTv" id="Mr9-K2-psW"/>
+            </connections>
+            <point key="canvasLocation" x="150.40000000000001" y="162.3688155922039"/>
+        </tableViewCell>
+    </objects>
+</document>

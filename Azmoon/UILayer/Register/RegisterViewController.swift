@@ -62,7 +62,7 @@ class RegisterViewController: UIViewController, BEMCheckBoxDelegate, UITextField
         let model = UserClass(nameTextField.text ?? "",familyNameTextField.text ?? "",fatherNameTextField.text ?? "",Int(nationalCodeTextField.text ?? "0"), manCheckBox,(usernameTextField.text ?? "").lowercased(), passwordTextField.text ?? "", smsCheckBox.on,phoneNumberTextField.text ?? "");
 
         if(model.name!.isEmpty){
-            // toast with a specific duration and position
+           
             self.view.makeToast("لطفا نام را وارد کنید", duration: 3.0, position: .center)
             
         } else if(model.familyName!.isEmpty){
@@ -85,11 +85,15 @@ class RegisterViewController: UIViewController, BEMCheckBoxDelegate, UITextField
             
             self.view.makeToast("لطفا نام کاربری را وارد کنید", duration: 3.0, position: .center)
             
+        } else if(model.username!.count < 6){
+            
+            self.view.makeToast("نام کاربری نباید کمتر از ۶ کاراکتر باشد", duration: 3.0, position: .center)
+            
         } else if(model.password!.isEmpty){
             
             self.view.makeToast("لطفا پسورد را وارد کنید", duration: 3.0, position: .center)
             
-        } else if(model.sendSms! && model.phoneNumber!.isEmpty ){
+        } else if(model.sendSms! && model.phoneNumber!.isEmpty){
             
             self.view.makeToast("لطفا شماره تلفن را وارد کنید", duration: 3.0, position: .center)
             

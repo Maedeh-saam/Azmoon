@@ -1,57 +1,37 @@
 import UIKit
+import SwiftIcons
 
 class ListTableViewCell: UITableViewCell {
     
-class var identifier: String { return String.className(self) }
+    class var identifier: String { return String.className(self) }
     
+    @IBOutlet weak var deleteQuestionButton: UIButton!
+    @IBOutlet weak var editQuestionButton: UIButton!
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var questionTopic: UILabel!
+    
+    
+    var cellModel : QuestionFullClass?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
+        self.editQuestionButton!.setIcon(icon: .fontAwesomeRegular(.edit), iconSize: 25, color: .blue, forState: .normal)
+        
+        self.deleteQuestionButton!.setIcon(icon: .ionicons(.trashA), iconSize: 30, color: .blue, forState: .normal)
+        
     }
     
     func height() -> CGFloat {
-        return UIScreen.main.bounds.width * 49 / 363
+        return UIScreen.main.bounds.width * 117 / 466
     }
     
-    func setData(_ data: Any?) {
-        if let data = data as? QuestionClass {
-            
-            self.questionNumberLabel.text = String(data.number!);
-            self.questionTopic.text = data.title
-        }
-    }
-    
-    @IBAction func deleteButton(_ sender: UIButton) {
+    func setData(_ data: QuestionFullClass!) {
         
-        let alert = UIAlertController(title: nil, message: "آیا مایل به حذف سوال هستید؟", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "بله", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "خیر", style: .cancel, handler: nil))
-        
-        let pvc = self.parentViewController as? ListViewController
-        pvc!.present(alert, animated: true, completion: nil)
+        self.cellModel = data;
+        self.questionNumberLabel.text = String(data.number!);
+        self.questionTopic.text = data.title
     }
-    
-    
-    @IBAction func editButton(_ sender: UIButton) {
-        if let pvc = self.parentViewController as? ListViewController {
-            
-            
-            //TODO Goto Edit
-            
-            
-        }
-    }
-    
-    
-
 }

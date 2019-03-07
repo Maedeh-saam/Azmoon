@@ -52,7 +52,7 @@ public class UserDb{
     }
     
     // MARK: Read Method
-    public func Read (input: UserFullClass) ->  [UserEntity] {
+    public func Read (_ input: UserFullClass) ->  [UserEntity] {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate;
         let context = appDelegate.persistentContainer.viewContext;
@@ -74,7 +74,7 @@ public class UserDb{
             request.predicate = NSPredicate(format: "is_man == %@", input.isMan ?? true)
         }
         if(input.nationalCode != nil) {
-            request.predicate = NSPredicate(format: "national_code == %@", input.nationalCode ?? 0)
+            request.predicate = NSPredicate(format: "national_code == %d", input.nationalCode ?? 0)
         }
         if(input.username != nil) {
             request.predicate = NSPredicate(format: "username == %@", input.username!)

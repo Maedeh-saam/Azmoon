@@ -8,11 +8,30 @@ public class QuestionDb{
     public func Insert (input: QuestionClass) ->  Bool {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate;
         let context = appDelegate.persistentContainer.viewContext;
+        var idNum = "0";
+        
+        // get last record of table - one by one
+        let request = NSFetchRequest<QuestionEntity>(entityName: "QuestionEntity")
+        let sort = NSSortDescriptor(key: "id", ascending: false)
+        request.sortDescriptors = [sort]
+        request.fetchLimit = 1
+        
+        do {
+            let result = try context.fetch(request)
+            if(result.count == 0){
+                idNum = "1";
+            } else{
+                let lastRecord = result[0];
+                idNum = String(Int(lastRecord.id!)! + 1);
+            }
+        } catch {
+            return false;
+        }
         
         let entity =  NSEntityDescription.entity(forEntityName: "QuestionEntity", in: context)
         let item = NSManagedObject(entity: entity!, insertInto: context);
         
-        item.setValue(0, forKey: "id")
+        item.setValue(idNum, forKey: "id")
         item.setValue(input.title, forKey: "title")
         item.setValue(input.number, forKey: "number")
         item.setValue(input.numberOfOptions, forKey: "number_of_options")
@@ -44,10 +63,10 @@ public class QuestionDb{
             request.predicate = NSPredicate(format: "title == %@", input.title!)
         }
         if(input.number != nil) {
-        request.predicate = NSPredicate(format: "number == %@", input.number ?? 0)
+        request.predicate = NSPredicate(format: "number == %d", input.number ?? 0)
         }
         if(input.numberOfOptions != nil) {
-        request.predicate = NSPredicate(format: "number_of_options == %@", input.numberOfOptions ?? 0)
+        request.predicate = NSPredicate(format: "number_of_options == %d", input.numberOfOptions ?? 0)
         }
         if(input.isOptional != nil) {
         request.predicate = NSPredicate(format: "is_optional == %@", input.isOptional ?? true)
@@ -99,8 +118,8 @@ public class QuestionDb{
         
         
         let request = NSFetchRequest<QuestionEntity>(entityName: "QuestionEntity")
-        request.predicate = NSPredicate(format: "id == %@", id)
-        request.returnsObjectsAsFaults = false
+        request.predicate = NSPredicate(format: "id == %@", String(id))
+    
         
             if let searchResults = try? context.fetch(request) {
                 for object in searchResults {

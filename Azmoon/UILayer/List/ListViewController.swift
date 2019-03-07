@@ -1,5 +1,6 @@
 import UIKit
 import SwiftIcons
+import Toast_Swift
 
 class ListViewController: UIViewController {
     
@@ -14,7 +15,6 @@ class ListViewController: UIViewController {
         
         questionListTableView.delegate = self
         self.questionListTableView.registerCellNib(ListTableViewCell.self)
-        
         
         back?.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30, color: .blue, forState: .normal)
         
@@ -36,6 +36,49 @@ class ListViewController: UIViewController {
         
     }
     
+    @objc
+    internal func DeleteQuestion(button: UIButton) {
+        
+        var indexPath: IndexPath!
+        if let superviewCell = button.superview as? ListTableViewCell{
+            indexPath = self.questionListTableView.indexPath(for: superviewCell)
+        }
+        
+        let cell = self.questionListTableView.cellForRow(at: indexPath!) as! ListTableViewCell
+        
+        
+        let alert = UIAlertController(title: nil, message: "آیا مایل به حذف سوال هستید؟", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "بله", style: .default, handler: {(action: UIAlertAction!) in
+            
+            if(ListModel().DeleteQuestionFromList(id: (cell.cellModel?.id)!)){
+                
+                self.view.makeToast("سوال مورد نظر با موفقیت حذف شد", duration: 3.0, position: .center)
+                self.recieveClasses.remove(at: indexPath.row)
+                self.questionListTableView.deleteRows(at: [indexPath], with: .automatic)
+                
+            }else{
+                self.view.makeToast("سوال مورد نظر حذف نشد", duration: 3.0, position: .center)
+            }
+            
+        }))
+        alert.addAction(UIAlertAction(title: "خیر", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc
+    internal func EditQuestion(button: UIButton) {
+        
+        var indexPath: IndexPath!
+        if let superviewCell = button.superview as? ListTableViewCell{
+            indexPath = self.questionListTableView.indexPath(for: superviewCell)
+            
+        }
+        let cell = self.questionListTableView.cellForRow(at: indexPath!) as! ListTableViewCell
+        
+        gotoEditQuestion(input: cell.cellModel!);
+    }
     
 }
 
@@ -44,27 +87,6 @@ extension ListViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return ListTableViewCell().height()
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let cell = tableView.cellForRow(at: indexPath) as! ListTableViewCell
-        
-        
-        //        cell.marketLikeButton.addTarget(self, action: #selector(LikeMarket(button:)), for: .touchUpInside)
-        //
-        //        cell.marketFollowButton.addTarget(self, action: #selector(FollowMarket(button:)), for: .touchUpInside)
-        
-        //        let recognizerMarketImage = UITapGestureRecognizer()
-        //        recognizerMarketImage.addTarget(self, action: #selector(GotoShopDetail))
-        //        cell.bannerImageView.isUserInteractionEnabled = true
-        //        cell.bannerImageView.addGestureRecognizer(recognizerMarketImage)
-        //
-        //        let recognizerMarketName = UITapGestureRecognizer()
-        //        recognizerMarketName.addTarget(self, action: #selector(GotoShopDetail))
-        //        cell.marketNameLabel.isUserInteractionEnabled = true
-        //        cell.marketNameLabel.addGestureRecognizer(recognizerMarketName)
-        
     }
     
 }
@@ -78,7 +100,22 @@ extension ListViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier) as! ListTableViewCell
-        cell.setData(recieveClasses[indexPath.row])
+        cell.setData(recieveClasses[indexPath.row] as? QuestionFullClass)
+        
+        cell.deleteQuestionButton.addTarget(self, action: #selector(DeleteQuestion(button:)), for: .touchUpInside)
+        
+        cell.editQuestionButton.addTarget(self, action: #selector(EditQuestion(button:)), for: .touchUpInside)
+        
         return cell
     }
+    
+    private func gotoEditQuestion(input: QuestionFullClass) -> Void {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "EditQuestion", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "EditQuestionViewController") as! EditQuestionViewController
+        newViewController.recievedDataQuestion = input;
+        
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
 }

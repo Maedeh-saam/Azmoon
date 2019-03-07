@@ -51,6 +51,12 @@ public class UserFullClass : UserClass  {
         
         super.init()
     }
+    override init() {
+        self.id = 0;
+        
+        super.init()
+    }
+    
 }
 
 public class UserClassSearch {
