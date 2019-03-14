@@ -139,16 +139,22 @@ public class UserDb{
         
         
         let request = NSFetchRequest<UserEntity>(entityName: "UserEntity")
-        request.predicate = NSPredicate(format: "id == %@", id)
+        request.predicate = NSPredicate(format: "id == %d", id)
         request.returnsObjectsAsFaults = false
         
         if let searchResults = try? context.fetch(request) {
             for object in searchResults {
                 context.delete(object)
+                
             }
         }
         
-        return true;
+        do {
+            try context.save();
+            return true;
+        } catch {
+            return false;
+        }
     }
     
     public func IsNotExistPhoneNumber (phoneNumber: String) ->  Bool {

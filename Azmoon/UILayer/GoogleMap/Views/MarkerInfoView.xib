@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="sL2-90-SSB" customClass="MarkerInfoView" customModule="Feed_Me" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GWu-IG-2To">
+                    <rect key="frame" x="25" y="38" width="100" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Aw9-Z7-jHE"/>
+                        <constraint firstAttribute="height" constant="60" id="mKn-xo-2Xd"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="134" translatesAutoresizingMaskIntoConstraints="NO" id="N95-Dx-dtJ">
+                    <rect key="frame" x="8" y="0.0" width="134" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="lvr-N6-HGr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="N95-Dx-dtJ" firstAttribute="top" secondItem="sL2-90-SSB" secondAttribute="top" id="282-uP-cqP"/>
+                <constraint firstAttribute="centerX" secondItem="GWu-IG-2To" secondAttribute="centerX" id="9gy-eQ-9aT"/>
+                <constraint firstItem="N95-Dx-dtJ" firstAttribute="leading" secondItem="sL2-90-SSB" secondAttribute="leading" constant="8" id="BB4-d7-unQ"/>
+                <constraint firstItem="GWu-IG-2To" firstAttribute="top" secondItem="N95-Dx-dtJ" secondAttribute="bottom" id="Jqs-zD-qGK"/>
+                <constraint firstAttribute="trailing" secondItem="N95-Dx-dtJ" secondAttribute="trailing" constant="8" id="XdV-Im-yht"/>
+                <constraint firstAttribute="bottom" secondItem="GWu-IG-2To" secondAttribute="bottom" constant="8" id="kBZ-Q3-JLw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="PR6-Z3-6qr"/>
+            <connections>
+                <outlet property="nameLabel" destination="N95-Dx-dtJ" id="DoU-do-dVW"/>
+                <outlet property="placePhoto" destination="GWu-IG-2To" id="YgL-nb-nIg"/>
+            </connections>
+            <point key="canvasLocation" x="-110" y="-310"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="Dyt-tC-Eti">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1vv-6f-NSz" customClass="MapViewController" customModule="Azmoon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MI1-8D-2RM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUX-v1-I6m">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="r4P-7n-M5u"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="in4-AY-K3W">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="abq-1K-QMD"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map location" translatesAutoresizingMaskIntoConstraints="NO" id="lHh-Ag-PdY">
+                                <rect key="frame" x="172.5" y="303.5" width="30" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5he-iz-QHX"/>
+                                    <constraint firstAttribute="width" constant="30" id="BZs-Sj-7aw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YUX-v1-I6m" firstAttribute="leading" secondItem="imF-yL-Wtx" secondAttribute="leading" id="Em4-Y3-7Ko"/>
+                            <constraint firstItem="YUX-v1-I6m" firstAttribute="trailing" secondItem="imF-yL-Wtx" secondAttribute="trailing" id="L6F-fa-h2k"/>
+                            <constraint firstItem="YUX-v1-I6m" firstAttribute="top" secondItem="imF-yL-Wtx" secondAttribute="top" id="NQo-a1-08H"/>
+                            <constraint firstItem="lHh-Ag-PdY" firstAttribute="centerX" secondItem="MI1-8D-2RM" secondAttribute="centerX" id="S0u-YG-DB4"/>
+                            <constraint firstItem="lHh-Ag-PdY" firstAttribute="centerY" secondItem="MI1-8D-2RM" secondAttribute="centerY" id="S8P-Bp-Vn8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="imF-yL-Wtx"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapCenterPinImage" destination="lHh-Ag-PdY" id="eVr-8Z-Hh6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCg-Jb-qux" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="89.505247376311857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map location" width="287" height="440"/>
+    </resources>
+</document>

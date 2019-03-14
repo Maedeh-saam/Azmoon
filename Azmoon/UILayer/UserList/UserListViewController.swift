@@ -41,8 +41,10 @@ class UserListViewController: UIViewController {
     internal func DeleteUser(button: UIButton) {
         
         var indexPath: IndexPath!
-        if let superviewCell = button.superview as? UserListTableViewCell{
-            indexPath = self.userListTableView.indexPath(for: superviewCell)
+        if let super1viewCell = button.superview{
+            if let super2viewCell = super1viewCell.superview as? UserListTableViewCell{
+                indexPath = self.userListTableView.indexPath(for: super2viewCell)
+            }
         }
         
         let cell = self.userListTableView.cellForRow(at: indexPath!) as! UserListTableViewCell
@@ -72,13 +74,30 @@ class UserListViewController: UIViewController {
     internal func EditUser(button: UIButton) {
         
         var indexPath: IndexPath!
-        if let superviewCell = button.superview as? UserListTableViewCell{
-            indexPath = self.userListTableView.indexPath(for: superviewCell)
-            
+        if let super1viewCell = button.superview{
+            if let super2viewCell = super1viewCell.superview as? UserListTableViewCell{
+                indexPath = self.userListTableView.indexPath(for: super2viewCell)
+            }
         }
+        
         let cell = self.userListTableView.cellForRow(at: indexPath!) as! UserListTableViewCell
         
         gotoEditUser(input: cell.cellModel!);
+    }
+    
+    @objc
+    internal func ViewUser(button: UIButton) {
+        
+        var indexPath: IndexPath!
+        if let super1viewCell = button.superview{
+            if let super2viewCell = super1viewCell.superview as? UserListTableViewCell{
+                indexPath = self.userListTableView.indexPath(for: super2viewCell)
+            }
+        }
+        
+        let cell = self.userListTableView.cellForRow(at: indexPath!) as! UserListTableViewCell
+        
+        gotoViewUser(input: cell.cellModel!);
     }
     
 }
@@ -107,6 +126,8 @@ extension UserListViewController : UITableViewDataSource {
         
         cell.editUserButton.addTarget(self, action: #selector(EditUser(button:)), for: .touchUpInside)
         
+        cell.viewUserButton.addTarget(self, action: #selector(ViewUser(button:)), for: .touchUpInside)
+        
         return cell
     }
     
@@ -114,6 +135,15 @@ extension UserListViewController : UITableViewDataSource {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "EditUser", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "EditUserViewController") as! EditUserViewController
+        newViewController.recievedDataUser = input;
+        
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
+    private func gotoViewUser(input: UserFullClass) -> Void {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "ViewUser", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ViewUserViewController") as! ViewUserViewController
         newViewController.recievedDataUser = input;
         
         self.present(newViewController, animated: true, completion: nil)

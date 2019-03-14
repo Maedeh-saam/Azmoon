@@ -46,6 +46,13 @@ public class QuestionFullClass : QuestionClass  {
         super.init()
     }
     
+    init(_ id:Int,_ isOptional : Bool?,_ number : Int?,_ numberOfOptions : Int?,_ option1 : String?,_ option2 : String?,_ option3 : String?,_ option4 : String?,_ option5 : String?,_ option6 : String?,_ title: String?) {
+        
+        self.id = id;
+        super.init(isOptional, number, numberOfOptions, option1, option2, option3, option4, option5, option6, title)
+        
+    }
+    
 }
 
 

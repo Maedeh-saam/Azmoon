@@ -10,6 +10,15 @@
 		16C9AFB632AF73BF7F5C839C /* Pods_AzmoonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF224EB6FF7B9BE78160BEB3 /* Pods_AzmoonUITests.framework */; };
 		2A8DE15AABC704EAF26530E6 /* Pods_Azmoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 685F8F39995B9D11269014E6 /* Pods_Azmoon.framework */; };
 		5A7291BB2469B4128714D6F6 /* Pods_AzmoonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9118F8485DD83803DDCD4D34 /* Pods_AzmoonTests.framework */; };
+		D307814422381D47008908BA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D307814322381D47008908BA /* MapViewController.swift */; };
+		D307814622381DF4008908BA /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D307814522381DF4008908BA /* TypesTableViewController.swift */; };
+		D307814A22381E91008908BA /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D307814922381E91008908BA /* GoogleDataProvider.swift */; };
+		D307814C22381EE2008908BA /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D307814B22381EE2008908BA /* GooglePlace.swift */; };
+		D307814F22382037008908BA /* MarkerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D307814E22382037008908BA /* MarkerInfoView.swift */; };
+		D3078151223820C5008908BA /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3078150223820C5008908BA /* MarkerInfoView.xib */; };
+		D307815322382103008908BA /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D307815222382103008908BA /* UIViewExtension.swift */; };
+		D3078155223821D2008908BA /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3078154223821D2008908BA /* Map.storyboard */; };
+		D307815722382AA1008908BA /* ChooseTypes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D307815622382AA1008908BA /* ChooseTypes.storyboard */; };
 		D308026C21E89B7F00E8BF83 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308026B21E89B7F00E8BF83 /* ReportViewController.swift */; };
 		D308026E21E89C0800E8BF83 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308026D21E89C0800E8BF83 /* ReportTableViewCell.swift */; };
 		D308027021E8A0C400E8BF83 /* AnsQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308026F21E8A0C400E8BF83 /* AnsQuestionsViewController.swift */; };
@@ -17,11 +26,15 @@
 		D308027621E8DD5C00E8BF83 /* Azmoon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D308027421E8DD5C00E8BF83 /* Azmoon.xcdatamodeld */; };
 		D308027921E8DFD200E8BF83 /* QuestionDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308027821E8DFD200E8BF83 /* QuestionDb.swift */; };
 		D308027B21EBA5BB00E8BF83 /* UserDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308027A21EBA5BB00E8BF83 /* UserDb.swift */; };
+		D30901632231181000E4052B /* EditUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30901622231181000E4052B /* EditUserModel.swift */; };
 		D309CD2B21D76DCB002542AC /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D309CD2A21D76DCB002542AC /* List.storyboard */; };
 		D309CD2D21D76DED002542AC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309CD2C21D76DED002542AC /* ListViewController.swift */; };
 		D309CD3021DE3BE7002542AC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309CD2F21DE3BE7002542AC /* ListTableViewCell.swift */; };
 		D315B0E321FCB6F900F55A19 /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B0E221FCB6F900F55A19 /* AddModel.swift */; };
 		D329EF1021F2099900B389A3 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D329EF0F21F2099900B389A3 /* LoginModel.swift */; };
+		D35634DE2235102300B0B8C1 /* EditQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35634DD2235102300B0B8C1 /* EditQuestionModel.swift */; };
+		D35634E122351CCA00B0B8C1 /* ViewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35634E022351CCA00B0B8C1 /* ViewUserViewController.swift */; };
+		D35634E322351CE600B0B8C1 /* ViewUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35634E222351CE600B0B8C1 /* ViewUser.storyboard */; };
 		D3597806221A95A30054CD26 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3597805221A95A30054CD26 /* UserListViewController.swift */; };
 		D3597808221A96D60054CD26 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3597807221A96D60054CD26 /* UserList.storyboard */; };
 		D359780D221AA2490054CD26 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D359780B221AA2490054CD26 /* UserListTableViewCell.swift */; };
@@ -84,6 +97,15 @@
 		9F34120EA31E36275CBBB900 /* Pods-AzmoonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzmoonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AzmoonTests/Pods-AzmoonTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B0DACCA332191293DCCF0A /* Pods-AzmoonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AzmoonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AzmoonTests/Pods-AzmoonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF224EB6FF7B9BE78160BEB3 /* Pods_AzmoonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AzmoonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D307814322381D47008908BA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D307814522381DF4008908BA /* TypesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
+		D307814922381E91008908BA /* GoogleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
+		D307814B22381EE2008908BA /* GooglePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlace.swift; sourceTree = "<group>"; };
+		D307814E22382037008908BA /* MarkerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerInfoView.swift; sourceTree = "<group>"; };
+		D3078150223820C5008908BA /* MarkerInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarkerInfoView.xib; sourceTree = "<group>"; };
+		D307815222382103008908BA /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		D3078154223821D2008908BA /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		D307815622382AA1008908BA /* ChooseTypes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChooseTypes.storyboard; sourceTree = "<group>"; };
 		D308026B21E89B7F00E8BF83 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		D308026D21E89C0800E8BF83 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		D308026F21E8A0C400E8BF83 /* AnsQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsQuestionsViewController.swift; sourceTree = "<group>"; };
@@ -91,11 +113,15 @@
 		D308027521E8DD5C00E8BF83 /* Azmoon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Azmoon.xcdatamodel; sourceTree = "<group>"; };
 		D308027821E8DFD200E8BF83 /* QuestionDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDb.swift; sourceTree = "<group>"; };
 		D308027A21EBA5BB00E8BF83 /* UserDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDb.swift; sourceTree = "<group>"; };
+		D30901622231181000E4052B /* EditUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserModel.swift; sourceTree = "<group>"; };
 		D309CD2A21D76DCB002542AC /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		D309CD2C21D76DED002542AC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		D309CD2F21DE3BE7002542AC /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		D315B0E221FCB6F900F55A19 /* AddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModel.swift; sourceTree = "<group>"; };
 		D329EF0F21F2099900B389A3 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		D35634DD2235102300B0B8C1 /* EditQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionModel.swift; sourceTree = "<group>"; };
+		D35634E022351CCA00B0B8C1 /* ViewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUserViewController.swift; sourceTree = "<group>"; };
+		D35634E222351CE600B0B8C1 /* ViewUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewUser.storyboard; sourceTree = "<group>"; };
 		D3597805221A95A30054CD26 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		D3597807221A96D60054CD26 /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
 		D359780B221AA2490054CD26 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
@@ -188,6 +214,46 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D307814122381CD8008908BA /* GoogleMap */ = {
+			isa = PBXGroup;
+			children = (
+				D307814222381D0A008908BA /* Controllers */,
+				D307814822381E75008908BA /* Model */,
+				D307814D22381F37008908BA /* Views */,
+				D3078154223821D2008908BA /* Map.storyboard */,
+			);
+			path = GoogleMap;
+			sourceTree = "<group>";
+		};
+		D307814222381D0A008908BA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D307814322381D47008908BA /* MapViewController.swift */,
+				D307814522381DF4008908BA /* TypesTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D307814822381E75008908BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D307814922381E91008908BA /* GoogleDataProvider.swift */,
+				D307814B22381EE2008908BA /* GooglePlace.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D307814D22381F37008908BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D307814E22382037008908BA /* MarkerInfoView.swift */,
+				D3078150223820C5008908BA /* MarkerInfoView.xib */,
+				D307815222382103008908BA /* UIViewExtension.swift */,
+				D307815622382AA1008908BA /* ChooseTypes.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D308027721E8DF9300E8BF83 /* OperationsDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +276,8 @@
 		D329EF1121F20ED000B389A3 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				D307814122381CD8008908BA /* GoogleMap */,
+				D35634DF22351C9400B0B8C1 /* ViewUser */,
 				D388A0DF21F4C917001219B0 /* Add */,
 				D388A0E221F4C9BE001219B0 /* AnsQuestions */,
 				D35F562522071D4100DF246E /* EditQuestion */,
@@ -234,6 +302,15 @@
 			path = DALayer;
 			sourceTree = "<group>";
 		};
+		D35634DF22351C9400B0B8C1 /* ViewUser */ = {
+			isa = PBXGroup;
+			children = (
+				D35634E022351CCA00B0B8C1 /* ViewUserViewController.swift */,
+				D35634E222351CE600B0B8C1 /* ViewUser.storyboard */,
+			);
+			path = ViewUser;
+			sourceTree = "<group>";
+		};
 		D3597802221A945B0054CD26 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +328,7 @@
 			children = (
 				D3597812221AEAB60054CD26 /* EditUserViewController.swift */,
 				D3597814221AEACD0054CD26 /* EditUser.storyboard */,
+				D30901622231181000E4052B /* EditUserModel.swift */,
 			);
 			path = EditUser;
 			sourceTree = "<group>";
@@ -260,6 +338,7 @@
 			children = (
 				D35F562622071D7500DF246E /* EditQuestion.storyboard */,
 				D35F562822071DA400DF246E /* EditQuestionViewController.swift */,
+				D35634DD2235102300B0B8C1 /* EditQuestionModel.swift */,
 			);
 			path = EditQuestion;
 			sourceTree = "<group>";
@@ -527,11 +606,15 @@
 				D3F7A2ED21D50CD500987DBE /* LaunchScreen.storyboard in Resources */,
 				D3FCE95821E3454300751C49 /* Report.storyboard in Resources */,
 				D3FCE95021E32DC700751C49 /* Remember.storyboard in Resources */,
+				D35634E322351CE600B0B8C1 /* ViewUser.storyboard in Resources */,
 				D3F7A2EA21D50CD500987DBE /* Assets.xcassets in Resources */,
 				D3597815221AEACD0054CD26 /* EditUser.storyboard in Resources */,
+				D307815722382AA1008908BA /* ChooseTypes.storyboard in Resources */,
 				D3FCE94C21E0FBE100751C49 /* Login.storyboard in Resources */,
 				D3F7A31121D511D100987DBE /* Add.storyboard in Resources */,
+				D3078151223820C5008908BA /* MarkerInfoView.xib in Resources */,
 				D3F7A2E821D50CD400987DBE /* Main.storyboard in Resources */,
+				D3078155223821D2008908BA /* Map.storyboard in Resources */,
 				D359780E221AA2490054CD26 /* UserListTableViewCell.xib in Resources */,
 				D309CD2B21D76DCB002542AC /* List.storyboard in Resources */,
 				D3597808221A96D60054CD26 /* UserList.storyboard in Resources */,
@@ -663,6 +746,7 @@
 			files = (
 				D308027021E8A0C400E8BF83 /* AnsQuestionsViewController.swift in Sources */,
 				D308027921E8DFD200E8BF83 /* QuestionDb.swift in Sources */,
+				D307814622381DF4008908BA /* TypesTableViewController.swift in Sources */,
 				D3FCE94A21E0FBCA00751C49 /* LoginViewController.swift in Sources */,
 				D308027221E8A0FA00E8BF83 /* AnsQuestionsTableViewCell.swift in Sources */,
 				D3F7A2E521D50CD400987DBE /* MainViewController.swift in Sources */,
@@ -676,19 +760,27 @@
 				D3597810221AA5D00054CD26 /* UserListModel.swift in Sources */,
 				D309CD3021DE3BE7002542AC /* ListTableViewCell.swift in Sources */,
 				D3FCE94E21E32DAE00751C49 /* RememberViewController.swift in Sources */,
+				D307814F22382037008908BA /* MarkerInfoView.swift in Sources */,
+				D307814422381D47008908BA /* MapViewController.swift in Sources */,
 				D315B0E321FCB6F900F55A19 /* AddModel.swift in Sources */,
 				D3851D5B220347FA00355DEB /* ListModel.swift in Sources */,
+				D307814A22381E91008908BA /* GoogleDataProvider.swift in Sources */,
 				D359780D221AA2490054CD26 /* UserListTableViewCell.swift in Sources */,
 				D309CD2D21D76DED002542AC /* ListViewController.swift in Sources */,
+				D35634DE2235102300B0B8C1 /* EditQuestionModel.swift in Sources */,
+				D30901632231181000E4052B /* EditUserModel.swift in Sources */,
 				D3597813221AEAB60054CD26 /* EditUserViewController.swift in Sources */,
 				D3851D592200EE2B00355DEB /* Extentions.swift in Sources */,
 				D308026C21E89B7F00E8BF83 /* ReportViewController.swift in Sources */,
+				D307814C22381EE2008908BA /* GooglePlace.swift in Sources */,
 				D388A0DC21F38953001219B0 /* RegisterModel.swift in Sources */,
 				D308026E21E89C0800E8BF83 /* ReportTableViewCell.swift in Sources */,
+				D35634E122351CCA00B0B8C1 /* ViewUserViewController.swift in Sources */,
 				D3F7A31521D51F7200987DBE /* RegisterViewController.swift in Sources */,
 				D388A0E721F4E2F2001219B0 /* UserClass.swift in Sources */,
 				D308027621E8DD5C00E8BF83 /* Azmoon.xcdatamodeld in Sources */,
 				D388A0ED21FB8B03001219B0 /* QuestionClass.swift in Sources */,
+				D307815322382103008908BA /* UIViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

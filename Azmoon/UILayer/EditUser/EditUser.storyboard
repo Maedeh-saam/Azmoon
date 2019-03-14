@@ -250,8 +250,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                         <state key="normal" title="بازگشت"/>
                                         <connections>
-                                            <action selector="backtoList:" destination="2hh-rG-IKG" eventType="touchUpInside" id="qCK-KU-tBS"/>
-                                            <action selector="backtoUserList:" destination="2hh-rG-IKG" eventType="touchUpInside" id="tAk-1h-gqM"/>
+                                            <action selector="backtoUserList:" destination="2hh-rG-IKG" eventType="touchUpInside" id="y0V-wV-E9o"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLq-bm-9lq">

@@ -46,17 +46,25 @@ public class UserFullClass : UserClass  {
        
     }
     
+    
     init(id: Int){
         self.id = id;
         
         super.init()
     }
+    
     override init() {
         self.id = 0;
         
         super.init()
     }
     
+    init(_ id:Int, _ name : String?,_ familyName : String?,_ fatherName : String?,_ nationalCode : Int?,_ isMan : Bool?,_ username : String?, _ password : String?, _ sendSms : Bool?, _ phoneNumber : String?) {
+
+        self.id = id;
+        super.init(name, familyName, fatherName, nationalCode, isMan, username, password, sendSms, phoneNumber)
+        
+    }
 }
 
 public class UserClassSearch {

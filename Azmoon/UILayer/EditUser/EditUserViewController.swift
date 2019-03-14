@@ -24,7 +24,6 @@ class EditUserViewController: UIViewController, BEMCheckBoxDelegate, UITextField
     
     // MARK: - Variables
     var genderCheckBoxes: [BEMCheckBox]?
-    var numberOfOptions: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,10 +98,12 @@ class EditUserViewController: UIViewController, BEMCheckBoxDelegate, UITextField
     @IBAction func registraionButton(_ sender: UIButton) {
         let manCheckBox = self.manCheckBox.on;
         let womanCheckBox = self.womanCheckBox.on;
+        let smsCheckBox = self.smsCheckBox.on;
         let confirmPassword = self.confirmPasswordTextField.text;
         
-        let model = UserClass(nameTextField.text ?? "",familyNameTextField.text ?? "",fatherNameTextField.text ?? "",Int(nationalCodeTextField.text ?? "0"), manCheckBox,(usernameTextField.text ?? "").lowercased(), passwordTextField.text ?? "", smsCheckBox.on,phoneNumberTextField.text ?? "")
-        
+        let model = UserFullClass(recievedDataUser!.id, nameTextField.text ?? "", familyNameTextField.text ?? "", fatherNameTextField.text ?? "", Int(nationalCodeTextField.text ?? "0"), manCheckBox, (usernameTextField.text ?? "").lowercased(), passwordTextField.text ?? "", smsCheckBox, phoneNumberTextField.text ?? "")
+    
+
         
         if((model.name!.isEmpty)){
             self.view.makeToast("لطفا نام را وارد کنید", duration: 3.0, position: .center)
@@ -139,13 +140,13 @@ class EditUserViewController: UIViewController, BEMCheckBoxDelegate, UITextField
             
             self.view.makeToast("لطفا شماره تلفن را وارد کنید", duration: 3.0, position: .center)
             
-        } else if(!RegisterModel().AllowNewRegister(username: model.username!, phoneNumber: model.phoneNumber!)){
+        } else if(!EditUserModel().AllowNewRegister(username: model.username!, phoneNumber: model.phoneNumber!)){
             self.view.makeToast("نام کاربری یا شماره تلفن قبلا ثبت شده است", duration: 3.0, position: .center)
             
         } else  if (model.password != confirmPassword) {
             self.view.makeToast("عدم تطابق پسورد", duration: 3.0, position: .center)
             
-        } else if(RegisterModel().SendDataToDb(input: model)){
+        } else if(EditUserModel().SendDataToDb(input: model)){
             
             self.view.makeToast("ویرایش اطلاعات کاربر با موفقیت انجام شد", duration: 3.0, position: .center)
             // delay interval()

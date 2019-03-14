@@ -126,6 +126,13 @@ public class QuestionDb{
                     context.delete(object)
                 }
             }
+        
+        do {
+            try context.save();
+            return true;
+        } catch {
+            return false;
+        }
             
             return true;
 }

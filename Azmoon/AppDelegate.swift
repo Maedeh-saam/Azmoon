@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+let googleApiKey = "AIzaSyCkjkMwCstqu9JSnurCfot0hW4R2YOij4M"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

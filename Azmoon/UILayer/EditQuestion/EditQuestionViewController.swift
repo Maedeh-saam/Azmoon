@@ -146,7 +146,8 @@ class EditQuestionViewController: UIViewController, BEMCheckBoxDelegate, UITextF
     @IBAction func registraionButton(_ sender: UIButton) {
         let optionalCheckBox = self.optionalCheckBox.on;
         
-        let model = QuestionClass(optionalCheckBox, Int(numberTextField.text ?? "0"), numberOfOptions, option1TextField.text ?? "", option2TextField.text ?? "", option3TextField.text ?? "", option4TextField.text ?? "", option5TextField.text ?? "", option6TextField.text ?? "", titleTextField.text ?? "")
+        let model = QuestionFullClass(recievedDataQuestion!.id, optionalCheckBox, Int(numberTextField.text ?? "0"), numberOfOptions, option1TextField.text ?? "", option2TextField.text ?? "", option3TextField.text ?? "", option4TextField.text ?? "", option5TextField.text ?? "", option6TextField.text ?? "", titleTextField.text ?? "")
+        
         
         if(model.number == nil){
             self.view.makeToast("لطفا شماره سوال را وارد کنید", duration: 3.0, position: .center)
@@ -158,7 +159,7 @@ class EditQuestionViewController: UIViewController, BEMCheckBoxDelegate, UITextF
         } else if(optionalCheckBox && showToastsOptional(model)){
             // nothing
             
-        } else if(AddModel().SendDataToDb(input: model)){
+        } else if(EditQuestionModel().SendDataToDb(input: model)){
             
             self.view.makeToast("عملیات افزودن سوال با موفقیت انجام شد", duration: 3.0, position: .center)
             // delay interval()
@@ -172,7 +173,7 @@ class EditQuestionViewController: UIViewController, BEMCheckBoxDelegate, UITextF
     
     
     // MARK: Private functions
-    private func showToastsOptional(_ model:QuestionClass) -> Bool{
+    private func showToastsOptional(_ model:QuestionFullClass) -> Bool{
         
         if (model.numberOfOptions! == 0){
             
